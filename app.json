@@ -1,0 +1,46 @@
+{
+  "name": "line-with-salesforce-sample",
+  "description": "Line の Messaging API と Liveagent チャットや Einstein Platform をつなぐ Heroku のサンプルアプリです。",
+  "repository": "https://github.com/hrk623/line-with-salesforce-sample",
+  "keywords": ["salesforce","line","node","einstein","liveagent"],
+  "env": {
+      "LINE_CHANNEL_ACCESS_TOKEN": {
+          "description": "LINE - Channel Access Token"
+      },
+      "LIVEAGENT_ORGANIZATION_ID": {
+          "description": "Salesforce - Liveagent Chat の組織 ID",
+          "required": false
+      },
+      "LIVEAGENT_POD": {
+         "description": "Salesforce - Liveagent API のエンドポイント(ホストのみ)",
+         "required": false
+      },
+      "LIVEAGENT_DEPLOYMENT_ID": {
+          "description": "Salesforce - Liveagent Chat のリリース ID",
+          "required": false
+      },
+      "LIVEAGENT_BUTTON_ID": {
+          "description": "Salesforce - Liveagent Chat のボタン ID",
+          "required": false
+      },
+      "LIVEAGENT_API_VERSION": {
+          "description": "Salesforce - Liveagent Rest API のバージョン",
+          "value": "39",
+          "required": false
+      },
+      "EINSTEIN_INTENT_MODEL_ID": {
+         "description": "Einstein Language - Einstein Intent で利用するモデルID。",
+         "required": false
+      },
+      "EINSTEIN_SENTIMENT_MODEL_ID": {
+         "description": "Einstein Language - Einstein Sentiment で利用するモデルID。",
+         "value": "CommunitySentiment",
+         "required": false
+      },
+      "GOOGLE_TRANSLATEAPI_TOKEN": {
+         "description": "Google - Einstein Language を利用する際に Google 翻訳を用いてメッセージの翻訳を行うための Google API Key。翻訳を行わない場合は空欄。",
+         "required": false
+      }
+  },
+  "addons": ["fixie:tricycle","mongolab:sandbox","einstein-vision:starter"]
+}

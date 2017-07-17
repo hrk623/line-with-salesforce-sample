@@ -1,0 +1,24 @@
+{
+  "name": "line-with-salesforce-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "8.1.4"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^7.4.1",
+    "mongodb": "^2.2.29",
+    "path": "^0.12.7",
+    "request": "^2.81.0"
+  }
+}
