@@ -8,6 +8,7 @@ exports.getSentiment = async (modelId, text) => {
   const request = require("request");
   const options = {
     url: "https://api.einstein.ai/v2/language/sentiment",
+    proxy: process.env.FIXIE_URL,
     headers: {
       'Authorization': 'Bearer ' + process.env.EINSTEIN_TOKEN,
       'Cache-Control': 'no-cache',
@@ -73,6 +74,7 @@ const getToken = () => {
   const request = require("request");
   const options = {
     url: 'https://api.einstein.ai/v2/oauth2/token',
+    proxy: process.env.FIXIE_URL,
     json: true,
     headers: {
       'Content-type': 'application/x-www-form-urlencoded'
@@ -94,6 +96,7 @@ const isTokenValid = (token) => {
   const request = require("request");
   const options = {
     url: "https://api.einstein.ai/v2/apiusage",
+    proxy: process.env.FIXIE_URL,
     headers: {
       'Authorization': 'Bearer ' + process.env.EINSTEIN_TOKEN,
       'Cache-Control': 'no-cache',
